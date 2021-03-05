@@ -1,7 +1,7 @@
 <template>
   <Header :title="type == 'login' ? '登录' : '注册'" />
   <div class="auth">
-    <img class="logo" src="//s.yezgea02.com/1606836859539/onpeice.png" alt="">
+    <img class="logo" src="../assets/logo.png" alt="">
     <van-form class="form-wrap" @submit="onSubmit" v-if="type == 'login'">
       <div class="form">
         <van-field
@@ -103,6 +103,7 @@ export default {
             password: state.password
           })
           localStorage.setItem('token', data.token)
+          // 跳转到/这个地址
           window.location.href = '/'
         } else {
           state.imgCode = verifyRef.value.imgCode || ''

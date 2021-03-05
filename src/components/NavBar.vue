@@ -1,5 +1,6 @@
 <template>
   <van-tabbar v-model="active">
+    <!-- 路由跳转 -->
     <van-tabbar-item name="/home" icon="notes-o" @click="link('/home')">明细</van-tabbar-item>
     <van-tabbar-item name="/data" icon="bar-chart-o" @click="link('/data')">统计</van-tabbar-item>
     <van-tabbar-item name="/user" icon="user-o" @click="link('/user')">我的</van-tabbar-item>
